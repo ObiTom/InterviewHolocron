@@ -13,13 +13,14 @@ namespace InterviewHolocron
             Console.WriteLine("Please enter a command." + Environment.NewLine + "Available Commands are:" + lightSaber.ListCommands());
 
             var InputSwitch = Console.ReadLine();
-
+            //TODO: Make this reflection based
             switch(InputSwitch)
             {
                 case "ReverseString":
                     {
                         Console.WriteLine("Please supply a string to be reversed" + Environment.NewLine);
-                        Console.WriteLine(lightSaber.ReverseString());
+                        var InputStr = Console.ReadLine();
+                        Console.WriteLine(lightSaber.ReverseString(InputStr));
                         Console.ReadLine();
                         break;
                     }

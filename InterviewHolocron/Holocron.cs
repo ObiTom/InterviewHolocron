@@ -64,5 +64,24 @@ namespace InterviewHolocron
                 return "No string to reverse!";
 
         }
+
+        public string ReverseWords(string InputStr)
+        {
+            var originalStr = InputStr;
+
+            if (!String.IsNullOrEmpty(originalStr))
+            {
+                var reversedWords = "";
+                var wordArray = originalStr.Split(' ');
+
+                for (int i = wordArray.Length - 1; i > -1; i--)
+                {
+                    reversedWords += wordArray[i];
+                }
+                return reversedWords;
+            }
+            else
+                return "Unable to reverse empty string!";
+        }
     }
 }
